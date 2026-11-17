@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный магазин</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Книжный магазин</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="control-group">
+        <label for="search-input">Поиск</label>
+        <input type="text" id="search-input" placeholder="Название книги...">
+      </div>
+
+      <div class="control-group">
+        <label for="category-filter">Категория</label>
+        <select id="category-filter">
+          <option value="all">Все категории</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>Сортировка по цене</label>
+        <div>
+          <button type="button" id="sort-asc" class="sort-btn active">↑ По возрастанию</button>
+          <button type="button" id="sort-desc" class="sort-btn">↓ По убыванию</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; margin-top: 15px;">
+          <input type="checkbox" id="instock-filter"> Только в наличии
+        </label>
+      </div>
+
+      <div class="control-group">
+        <button type="button" id="reset-filters" class="sort-btn" style="margin-top: 15px;">Сбросить фильтры</button>
+      </div>
+    </section>
+
+    <p id="results-count"></p>
+
+    <section class="catalog" id="catalog"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
